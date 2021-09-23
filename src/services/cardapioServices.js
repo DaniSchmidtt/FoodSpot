@@ -1,4 +1,4 @@
-const { cardapiotemodel } = require('../repository/index')
+const { cardapiomodel } = require('../repository/index')
 async function createCardapio(cardapio) {
     //fazer validações
     delete cardapio._id

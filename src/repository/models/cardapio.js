@@ -5,6 +5,10 @@ let cardapioschema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         auto: true
     },
+    id_restaurante: {
+        type: String,
+        required: true
+    },
     prato: {
         type: String,
         required: true
