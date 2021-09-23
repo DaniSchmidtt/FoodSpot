@@ -1,7 +1,23 @@
 const { cardapiomodel } = require('../repository/index')
 async function createCardapio(cardapio) {
-    //fazer validações
-    delete cardapio._id
+    if (cardapio._id) {
+        delete cardapio._id
+    }
+    if (!cardapio.id_restaurante) {
+        return 'Não é possivel criar sem um restaurante vinculado'
+    }
+    if (!cardapio.prato) {
+        return 'Não é possivel criar sem um prato'
+    }
+    if (!cardapio.ingredientes) {
+        return 'Não é possivel criar sem ingredientes'
+    }
+    if (!cardapio.categoria) {
+        return 'Não é possivel criar sem uma categoria'
+    }
+    if (!cardapio.alergenicos) {
+        return 'Não é possivel criar sem detalhes de alergenicos'
+    }
     return await cardapiomodel.create(cardapio)
 }
 async function getCardapios() {
@@ -14,7 +30,12 @@ async function getCardapio(_id) {
 }
 async function updateCardapio(cardapio) {
     //fazer validações verificar se esta vindo o id
-    return await cardapiomodel.updateOne({_id:cardapio._id},cardapio)
+    if (cardapio._id) {
+        return await cardapiomodel.updateOne({ _id: cardapio._id }, cardapio)
+    }
+    else {
+        return 'Não é possivel atualizar sem um ID'
+    }
 }
 async function deleteCardapio(_id) {
     //fazer validações quando retornar nulo mandar mensagem de erro
