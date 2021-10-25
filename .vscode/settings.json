@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/c68be08b-f641-44a8-86a5-e412fc381714/resourceGroups/FoodSpotAPI/providers/Microsoft.Web/sites/foodspot",
+    "appService.deploySubpath": "."
 }
