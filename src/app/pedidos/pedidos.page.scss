@@ -26,3 +26,18 @@ ion-menu-button {
   #container a {
     text-decoration: none;
   }
+  .item-name {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .item-detail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 62px;
+  }
+  .item-price {
+    font-weight: 700;
+    color: #FECE2F;
+  }

@@ -1,11 +1,11 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ pedidos }}</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -13,9 +13,33 @@
       <ion-title size="large">{{ pedidos }}</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <h2 ion-text class="ion-text-center Exo2" >
+      <strong> Pedidos </strong>
+    </h2>
+    <ion-img src="assets/imgs/pedido.png" style="height:250px;"  ></ion-img>
   
-  <div id="container">
-    <strong class="capitalize">{{ pedidos }}</strong>    
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+    <ion-list *ngFor="let number of numbers ; let i=index ">
+        <!-- list -->
+        <ion-item text-wrap >
+            <!-- item -->
+            <ion-row>
+                <ion-col col-6>
+                    <img src="assets/imgs/empty.png" alt="foodname" />
+                </ion-col>
+                <ion-col col-6>
+                    <p class="item-name" style="color: #FECE2F;">PEDIDO # {{i}}</p>
+                    <p class="item-detail" text-wrap>
+                      <span>batatinha 123
+                      </span>
+                    </p>
+                    <p class="item-detail">R$:
+                        <span class="item-price">123
+                        </span>
+                    </p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
 </ion-content>

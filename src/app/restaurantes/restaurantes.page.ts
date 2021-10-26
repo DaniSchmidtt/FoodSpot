@@ -8,8 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RestaurantesPage implements OnInit {
   public restaurante: string;
+  numbers: any[];
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+      this.numbers = Array(5).fill(4); // Isso é só pra aparecer o design, trocar quando implementar a listagem de verdade :)
+    
+   }
 
   ngOnInit() {
     this.restaurante = this.activatedRoute.snapshot.paramMap.get('id');
