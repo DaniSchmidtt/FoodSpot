@@ -5,5 +5,7 @@ mongoose.connect("mongodb://foodspotdb:aUkh2PMb1UdhCAu1WrYIx62WwmfnN3YjPSGAguDZf
 module.exports = {
     restaurantemodel: require('./models/restaurante'),
     cardapiomodel: require('./models/cardapio'),
-    loginmodel: require('./models/login')
+    loginmodel: require('./models/login'),
+    loginadmmodel: require('./models/loginadm'),
+    loginRestaurantemodel: require('./models/loginRestaurante')
 }

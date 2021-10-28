@@ -32,11 +32,12 @@ export class LoginPage implements OnInit {
         this.retorno = data;
         this.appComponent.isloged = this.retorno.auth;
         this.appComponent.user = this.email;
-        this.showAlert("Sucesso", "Login realizado");        
+        this.showAlert("Sucesso", "Login realizado");  
+        this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
       }, error => {
         this.showAlert("Login failed", "Login ou senha não estão cadastrados");
       });
-      this.router.navigateByUrl('restaurantes/Restaurantes')
+      
   }
   async showAlert(cabecalho, menssagem) {
     const alert = await this.alertCtrl.create({
