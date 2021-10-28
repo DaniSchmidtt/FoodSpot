@@ -18,8 +18,7 @@
     <h2 ion-text class="ion-text-center Exo2" >
       <strong> FoodSpot </strong>
     </h2>
-    <ion-img src="assets/imgs/login.png" style="height:400px;"  ></ion-img>
-  
+    <ion-img src="assets/imgs/login.png" style="height:400px;"  ></ion-img>  
   </div>
   
   <div class="login-content">
@@ -29,14 +28,14 @@
           <ion-icon name="mail" item-start class="text-primary"></ion-icon>
           Email
         </ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input name="email" [(ngModel)]="email" type="email"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>
           <ion-icon name="lock-closed-outline" item-start class="text-primary"></ion-icon>
           Senha
         </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input name="password" [(ngModel)]="password" type="password"></ion-input>
       </ion-item>
     </form>
   </div>
@@ -49,7 +48,7 @@
     </ion-button>
   </ion-buttons>
   <ion-buttons slot="primary">
-    <ion-button fill="clear" style="color:#FECE2F;">
+    <ion-button fill="clear" style="color:#FECE2F;" (click)="Auth()">
       Login
       <ion-icon name="log-in-outline"></ion-icon>
     </ion-button>
