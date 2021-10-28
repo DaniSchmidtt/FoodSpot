@@ -1,3 +1,4 @@
+const cors = require("cors");
 const dotenv = require("dotenv-safe").config();
 const express = require('express')
 const restauranterouter = require('./routes/restaurante')
@@ -6,7 +7,7 @@ const loginrouter = require('./routes/login')
 const app = express()
 const jwt = require('jsonwebtoken');
 app.use(express.json())
-
+app.use(cors())
 app.use('/restaurante',restauranterouter)
 app.use('/cardapio',cardapiorouter)
 app.use('/login',loginrouter)

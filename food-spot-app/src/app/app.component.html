@@ -2,14 +2,26 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">   
+        <ion-list id="inbox-list" *ngIf="isloged === null" >   
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appBottonPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>            
           </ion-menu-toggle>
-        </ion-list>        
+        </ion-list>
+        <ion-list id="inbox-list" *ngIf="isloged" >   
+          <ion-menu-toggle auto-hide="false">
+            <ion-item >
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-label>{{user}}</ion-label>
+            </ion-item>
+            <ion-button fill="clear" style="color:#FECE2F;" (click)="logout()">
+              Loggout
+              <ion-icon name="log-in-outline"></ion-icon>
+            </ion-button>       
+          </ion-menu-toggle>
+        </ion-list> 
 
        <!-- <ion-list id="labels-list">
           <ion-list-header>Labels</ion-list-header>
