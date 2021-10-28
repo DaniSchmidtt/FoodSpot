@@ -28,28 +28,28 @@
             <ion-icon name="person-outline"></ion-icon>
             Nome
           </ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-input name="nome" [(ngModel)]="nome" type="email"></ion-input>
         </ion-item>
         <ion-item >
           <ion-label floating >
-            <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+            <ion-icon  name="mail" item-start class="text-primary"></ion-icon>
             Email
           </ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-input name="email" [(ngModel)]="email" type="email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>
             <ion-icon name="lock-closed-outline" item-start class="text-primary"></ion-icon>
             Senha
           </ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input name="password" [(ngModel)]="password" type="password"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>
             <ion-icon name="lock-closed-outline" item-start class="text-primary"></ion-icon>
             Confirmar Senha
           </ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input name="secpassword" [(ngModel)]="secpassword" type="password"></ion-input>
         </ion-item>
 <div style="margin: auto; text-align: center;">
         <h6>Preferências alimentares</h6>
@@ -82,7 +82,7 @@
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="primary">
-      <ion-button fill="clear" style="color:#FECE2F;">
+      <ion-button fill="clear" style="color:#FECE2F;" (click)="Cadastrar()">
         Cadastrar
         <ion-icon name="checkbox-outline"></ion-icon>
       </ion-button>

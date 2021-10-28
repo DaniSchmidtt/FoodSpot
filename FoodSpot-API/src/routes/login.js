@@ -6,8 +6,7 @@ const jwt = require('jsonwebtoken');
 const loginservice = require('../services/loginServices')
 
 app.post('/', async (req, res) => {
-    let resposta = await loginservice.createLogin(req.body)
-    res.json(resposta)
+    let resposta = await loginservice.createLogin(req.body,res)
 });
 app.post('/auth', async (req, res) => {
     let login = await loginservice.getLogins(req.body.login)

@@ -26,7 +26,6 @@ export class LoginPage implements OnInit {
       "login": this.email,
       "senha": this.password
     }
-    console.log(postData)
 
     this.httpClient.post("http://localhost:1337/login/auth", postData)
       .subscribe(data => {
