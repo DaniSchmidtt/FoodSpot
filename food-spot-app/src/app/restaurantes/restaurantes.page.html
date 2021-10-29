@@ -22,7 +22,7 @@
   
   </div>
   <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
-    <ion-list *ngFor="let number of retorno ; let i=index ">
+    <ion-list *ngFor="let restaurante of retorno ; let i=index ">
         <!-- list -->
         <ion-item text-wrap >
             <!-- item -->
@@ -31,14 +31,14 @@
                     <img src="assets/imgs/empty.png" alt="foodname" />
                 </ion-col>
                 <ion-col col-6>
-                    <p class="item-name">{{number.nome}}</p>
+                    <p class="item-name">{{restaurante.nome}}</p>
                     <p class="item-detail" text-wrap>
                       <ion-chip outline color="tertiary">
                         <ion-icon name="restaurant"></ion-icon>
-                        <ion-label>{{number.categoria}}</ion-label>
+                        <ion-label>{{restaurante.categoria}}</ion-label>
                       </ion-chip>
                     </p>
-                    <p class="item-detail">{{number.descricao}}
+                    <p class="item-detail">{{restaurante.descricao}}
                     </p>
                 </ion-col>
             </ion-row>
