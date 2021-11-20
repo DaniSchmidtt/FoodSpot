@@ -34,7 +34,17 @@ const routes: Routes = [
   {
     path: 'detalhe/:id',
     loadChildren: () => import('./detalhe/detalhe.module').then( m => m.DetalhePageModule)
+  },
+  {
+    path: 'cadastro-restaurante/:id',
+    loadChildren: () => import('./cadastro-restaurante/cadastro-restaurante.module').then( m => m.CadastroRestaurantePageModule)
+  },
+  {
+    path: 'cadastro-prato/:id',
+    loadChildren: () => import('./cadastro-prato/cadastro-prato.module').then( m => m.CadastroPratoPageModule)
   }
+
+
 
 ];
 
