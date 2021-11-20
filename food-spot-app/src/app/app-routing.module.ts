@@ -42,7 +42,12 @@ const routes: Routes = [
   {
     path: 'cadastro-prato/:id',
     loadChildren: () => import('./cadastro-prato/cadastro-prato.module').then( m => m.CadastroPratoPageModule)
+  },
+  {
+    path: 'cardapio/:id',
+    loadChildren: () => import('./cardapio/cardapio.module').then( m => m.CardapioPageModule)
   }
+
 
 
 
