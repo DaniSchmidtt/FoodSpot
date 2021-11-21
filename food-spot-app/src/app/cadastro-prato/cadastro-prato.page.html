@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <h4 ion-text class="ion-text-center Exo2" >
+      <strong> Cadastro Item menu</strong>
+    </h4>
+    <ion-img src="assets/imgs/cadastroItem.png" style="height:300px;" ></ion-img>
+  
+  </div>
+  
+  <div>
+    <form>
+      <ion-item>
+        <ion-label floating >
+          <ion-icon name="information-outline"></ion-icon>
+          Id Restaurante
+        </ion-label>
+        <ion-input name="id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating >
+          <ion-icon name="fast-food-outline"></ion-icon>
+          Prato
+        </ion-label>
+        <ion-input name="prato"></ion-input>
+      </ion-item>
+      <ion-item style="text-align: center;" >
+        <ion-label >
+          <ion-icon  name="arrow-down-outline" item-start class="text-primary"></ion-icon>
+          Ingredientes
+          <ion-icon  name="arrow-down-outline" item-start class="text-primary"></ion-icon>
+        </ion-label>
+
+      </ion-item>
+      <ion-textarea name="ingredientes"></ion-textarea>
+      <ion-item>
+        <ion-label floating >
+          <ion-icon name="fast-food-outline"></ion-icon>
+          Alergenicos
+        </ion-label>
+        <ion-input name="Alergenicos"></ion-input>
+      </ion-item>
+<div style="margin: auto; text-align: center;">
+      <h6>Categoria</h6>
+    <p>
+      <ion-chip outline color="primary">
+        <ion-icon name="pizza-outline"></ion-icon>
+        <ion-label>Massas</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+      <ion-chip outline color="primary">
+        <ion-icon name="fast-food-outline" ></ion-icon>
+        <ion-label>Fast food</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+      <ion-chip outline color="primary">
+        <ion-icon name="leaf-outline"></ion-icon>
+        <ion-label>Vegano</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+    </p>
+  </div>
+    </form>
+  </div>
+</ion-content>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button fill="clear">
+      <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+      Voltar
+    </ion-button>
+  </ion-buttons>
+  <ion-buttons slot="primary">
+    <ion-button fill="clear" style="color:#FECE2F;" >
+      Cadastrar
+      <ion-icon name="checkbox-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+</ion-toolbar>

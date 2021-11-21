@@ -30,7 +30,27 @@ const routes: Routes = [
   {
     path: 'cadastro/:id',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'detalhe/:id',
+    loadChildren: () => import('./detalhe/detalhe.module').then( m => m.DetalhePageModule)
+  },
+  {
+    path: 'cadastro-restaurante/:id',
+    loadChildren: () => import('./cadastro-restaurante/cadastro-restaurante.module').then( m => m.CadastroRestaurantePageModule)
+  },
+  {
+    path: 'cadastro-prato/:id',
+    loadChildren: () => import('./cadastro-prato/cadastro-prato.module').then( m => m.CadastroPratoPageModule)
+  },
+  {
+    path: 'cardapio/:id',
+    loadChildren: () => import('./cardapio/cardapio.module').then( m => m.CardapioPageModule)
   }
+
+
+
+
 ];
 
 @NgModule({

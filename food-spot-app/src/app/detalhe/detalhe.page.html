@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ detalhe }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div padding-horizontal text-center class="animated fadeInDown">
+    <h2 ion-text class="ion-text-center Exo2" >
+      <strong> Nome do restaurante </strong>
+    </h2>
+  </div>
+  <div >
+  <ion-card>
+    <ion-img src="assets/imgs/pratoEmpty.png" style="height:250px;"  ></ion-img>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Nome do prato</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div style="text-align: center;">Lista de ingredientes</div>
+      <div style="text-align: center; margin-top: 50px; color: #FECE2F;">R$: 9,99</div>
+      <div style="text-align: center; margin-top: 80px;">
+        <ion-fab horizontal="start" slot="fixed" (click)="decrement()">
+          <ion-fab-button>
+            <ion-icon name="remove-circle" > </ion-icon>
+          </ion-fab-button>
+        </ion-fab><ion-chip [disabled]="true">
+          <ion-label> {{totalItens}} </ion-label>
+        </ion-chip>
+        <ion-fab horizontal="end" slot="fixed" (click)="increment()">
+          <ion-fab-button>
+            <ion-icon name="add-circle" >
+            </ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+        <section style="margin-top: 30px;">
+          <ion-button expand="full" color="secondary">Adicionar ao carrinho</ion-button>
+        </section>
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  </div>
+
+</ion-content>
