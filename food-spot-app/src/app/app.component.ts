@@ -15,7 +15,12 @@ export class AppComponent {
   ];
   public appPagesOff = [
     { title: 'Restaurantes', url: '/restaurantes/Restaurantes', icon: 'restaurant' },
-    { title: 'Procurar', url: '/procurar/Procurar', icon: 'search' }
+    { title: 'Procurar', url: '/procurar/Procurar', icon: 'search' },
+    { title: 'cardapio', url: '/cardapio/cardapio', icon: 'search' },
+    { title: 'cadastro-prato', url: '/cadastro-prato/cadastro-prato', icon: 'search' },
+    { title: 'cadastro-restaurante', url: '/cadastro-restaurante/cadastro-restaurante', icon: 'search' },
+    { title: 'detalhe', url: '/detalhe/detalhe', icon: 'search' }
+
   ];
   public appBottonPages= [
     { title: 'Login', url: '/login/Login', icon: 'enter' },
