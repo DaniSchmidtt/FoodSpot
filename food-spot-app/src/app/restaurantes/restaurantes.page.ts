@@ -13,10 +13,8 @@ export class RestaurantesPage implements OnInit {
   public restaurante: string;
   public api: Observable<any>;
   public retorno;
-  numbers: any[];
 
   constructor(private activatedRoute: ActivatedRoute,public httpClient: HttpClient) {
-      this.numbers = Array(5).fill(4); // Isso é só pra aparecer o design, trocar quando implementar a listagem de verdade :)
       this.httpClient.get("http://localhost:1337/restaurante")
       .subscribe(data => {
         this.retorno = data;

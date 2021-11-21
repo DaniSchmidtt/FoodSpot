@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://foodspotdb:aUkh2PMb1UdhCAu1WrYIx62WwmfnN3YjPSGAguDZfFdKKuQ6SKLj2ckbNFu5nY6B9qQzgILW0bsxUFLR5pT5lA==@foodspotdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@foodspotdb@")
+mongoose.connect("mongodb+srv://admin:123@cluster0.rjlba.mongodb.net/test?authSource=admin&replicaSet=atlas-4qm2jf-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
 
 module.exports = {
     restaurantemodel: require('./models/restaurante'),

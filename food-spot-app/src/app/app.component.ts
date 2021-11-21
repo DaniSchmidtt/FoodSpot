@@ -20,7 +20,6 @@ export class AppComponent {
     { title: 'cadastro-prato', url: '/cadastro-prato/cadastro-prato', icon: 'search' },
     { title: 'cadastro-restaurante', url: '/cadastro-restaurante/cadastro-restaurante', icon: 'search' },
     { title: 'detalhe', url: '/detalhe/detalhe', icon: 'search' }
-
   ];
   public appBottonPages= [
     { title: 'Login', url: '/login/Login', icon: 'enter' },
