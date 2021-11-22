@@ -37,7 +37,7 @@ export class LoginPage implements OnInit {
         this.showAlert("Sucesso", "Login realizado");  
         this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
       }, error => {
-        this.httpClient.post("http://localhost:1337/login/authadm", postData)
+        this.httpClient.post(environment.api_url + "/login/authadm", postData)
         .subscribe(data => {
           this.retorno = data;
           this.appComponent.isloged = this.retorno.auth;
@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
           this.showAlert("Sucesso", "Login realizado");  
           this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
         }, error => {
-          this.httpClient.post("http://localhost:1337/login/authRestaurante", postData)
+          this.httpClient.post(environment.api_url + "/login/authRestaurante", postData)
           .subscribe(data => {
             this.retorno = data;
             this.appComponent.isloged = this.retorno.auth;
