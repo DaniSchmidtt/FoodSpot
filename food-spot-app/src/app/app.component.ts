@@ -14,14 +14,13 @@ export class AppComponent {
     { title: 'Pedidos', url: '/pedidos/Pedidos', icon: 'archive' }
   ];
   public appPagesOff = [
-    { title: 'Restaurantes', url: '/restaurantes/Restaurantes', icon: 'restaurant' },
-    { title: 'cardapio', url: '/cardapio/cardapio', icon: 'book' }
+    { title: 'Restaurantes', url: '/restaurantes/Restaurantes', icon: 'restaurant' }
   ];
   public appAdm= [
     { title: 'cadastro-restaurante', url: '/cadastro-restaurante/cadastro-restaurante', icon: 'restaurant' }
   ];
   public appRestaurante= [
-    { title: 'cadastro de prato', url: '/cadastro-prato/cadastro-prato', icon: 'plate' },
+    { title: 'cadastro de prato', url: '/cadastro-prato/cadastro-prato', icon: 'archive' },
   ];
   public appBottonPages= [
     { title: 'Login', url: '/login/Login', icon: 'enter' },

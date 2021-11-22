@@ -33,7 +33,7 @@
                 <ion-col col-6>
                     <p class="item-name">{{restaurante.nome}}</p>
                     <p class="item-detail" text-wrap>
-                      <ion-chip outline color="tertiary">
+                      <ion-chip outline color="tertiary" (click)="Redirecionamento(restaurante.nome)">
                         <ion-icon name="restaurant"></ion-icon>
                         <ion-label>{{restaurante.categoria}}</ion-label>
                       </ion-chip>

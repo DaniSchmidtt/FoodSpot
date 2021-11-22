@@ -54,7 +54,7 @@ export class CadastroPage implements OnInit {
         "login": this.email,
         "senha": this.password
       }  
-      this.httpClient.post(environment.api_url + "/login/auth", postData)
+      this.httpClient.post(environment.api_url + "/login/authRestaurante", postData)
         .subscribe(data => {
           this.retorno = data;
           this.appComponent.isloged = this.retorno.auth;

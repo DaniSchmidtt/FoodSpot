@@ -21,79 +21,78 @@
           <ion-icon name="restaurant-outline"></ion-icon>
           Nome
         </ion-label>
-        <ion-input name="nome"></ion-input>
+        <ion-input name="nome" [(ngModel)]="nome"></ion-input>
       </ion-item>
-      <ion-item style="text-align: center;" >
+      <ion-item style="text-align: left;" >
         <ion-label >
           <ion-icon  name="arrow-down-outline" item-start class="text-primary"></ion-icon>
           Descrição
           <ion-icon  name="arrow-down-outline" item-start class="text-primary"></ion-icon>
-        </ion-label>
-
+        </ion-label>        
       </ion-item>
-      <ion-textarea name="descricao"></ion-textarea>
+      <ion-item style="text-align: left;" >
+      <ion-input name="descricao" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
       <ion-item>
         <ion-label floating>
           <ion-icon name="pin-outline" item-start class="text-primary"></ion-icon>
           Local
         </ion-label>
-        <ion-input name="local" ></ion-input>
+        <ion-input name="local"[(ngModel)]="local" ></ion-input>
       </ion-item>
 <div style="margin: auto; text-align: center;">
       <h6>Categorias</h6>
     <p>
-      <ion-chip outline color="primary">
-        <ion-icon name="pizza-outline"></ion-icon>
+      <ion-chip #Italiana outline color="primary" (click)="Selected('Italiana',Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Cafe,Marmita,Lanches)" >
         <ion-label>Italiana</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="fast-food-outline" ></ion-icon>
+      <ion-chip #Massa outline color="primary" (click)="Selected('Massa',Massa,Italiana,Brasileira,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Cafe,Marmita,Lanches)" name= "Massa">
         <ion-label>Massa</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="leaf-outline"></ion-icon>
+      <ion-chip #Brasileira outline color="primary" (click)="Selected('Brasileira',Brasileira,Italiana,Massa,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Cafe,Marmita,Lanches)" name= "Brasileira">
         <ion-label>Brasileira</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="pizza-outline"></ion-icon>
-        <ion-label>Frutos do mar</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
+      <ion-chip #Frutos_do_mar outline color="primary" (click)="Selected('Frutos do mar',Frutos_do_mar,Italiana,Massa,Brasileira,Japonesa,Pizza,Vegetariana,Cafe,Marmita,Lanches)" name= "Frutos do mar">
+        <ion-label>Frutos do mar</ion-label >
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="fast-food-outline" ></ion-icon>
+      <ion-chip #Japonesa outline color="primary" (click)="Selected('Japonesa',Japonesa,Italiana,Massa,Brasileira,Frutos_do_mar,Pizza,Vegetariana,Cafe,Marmita,Lanches)" name= "Japonesa">
         <ion-label>Japonesa</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="leaf-outline"></ion-icon>
+      <ion-chip #Pizza outline color="primary" (click)="Selected('Pizza',Pizza,Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Vegetariana,Cafe,Marmita,Lanches)" name= "Pizza">
         <ion-label>Pizza</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="pizza-outline"></ion-icon>
+      <ion-chip #Vegetariana outline color="primary" (click)="Selected('Vegetariana',Vegetariana,Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Pizza,Cafe,Marmita,Lanches)" name= "Vegetariana">
         <ion-label>Vegetariana</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="fast-food-outline" ></ion-icon>
+      <ion-chip #Cafe outline color="primary" (click)="Selected('Cafe',Cafe,Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Marmita,Lanches)" name= "Cafe">
         <ion-label>Cafe</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="leaf-outline"></ion-icon>
+      <ion-chip #Marmita outline color="primary" (click)="Selected('Marmita',Marmita,Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Cafe,Lanches)" name= "Marmita">
         <ion-label>Marmita</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
-      <ion-chip outline color="primary">
-        <ion-icon name="leaf-outline"></ion-icon>
+      <ion-chip #Lanches outline color="primary" (click)="Selected('Lanches',Lanches,Italiana,Massa,Brasileira,Frutos_do_mar,Japonesa,Pizza,Vegetariana,Cafe,Marmita)" name= "Lanches">
         <ion-label>Lanches</ion-label>
-        <ion-icon name="close-circle"></ion-icon>
       </ion-chip>
     </p>
   </div>
+    </form>
+  </div>
+  <div>
+    <form>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock-closed-outline" item-start class="text-primary"></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input name="password" [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock-closed-outline" item-start class="text-primary"></ion-icon>
+          Confirmar Senha
+        </ion-label>
+        <ion-input name="secpassword" [(ngModel)]="secpassword" type="password"></ion-input>
+      </ion-item>
     </form>
   </div>
 </ion-content>
@@ -105,7 +104,7 @@
     </ion-button>
   </ion-buttons>
   <ion-buttons slot="primary">
-    <ion-button fill="clear" style="color:#FECE2F;" >
+    <ion-button fill="clear" style="color:#FECE2F;" (click)="Cadastrar()" >
       Cadastrar
       <ion-icon name="checkbox-outline"></ion-icon>
     </ion-button>
