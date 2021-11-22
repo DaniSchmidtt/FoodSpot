@@ -38,26 +38,29 @@
                       <span class="item-price">{{prato.preco}}
                       </span>
                   </p>
-              </ion-col>   
+              </ion-col>
+              <ion-button color= "black" style="color: #FECE2F;" (click)="Carrinho(prato.prato,prato.preco)">+</ion-button> 
           </ion-row>
         </div>
       </ion-item>
   </ion-list>
   <div *ngSwitchCase="'carrinho'">
       <ion-list >
-        <ion-item  *ngFor="let number of numbers ; let i=index ">
+        <ion-item  *ngFor="let number of carrinho ; let i=index ">
           <ion-thumbnail slot="start">
             <img src="assets/imgs/pratoEmpty.png">
           </ion-thumbnail>
           <ion-label>
-            <h3>Nome prato</h3>
-            <p>Quantidade x</p>
-            <p>R$:59,90</p>
+            <h3>{{number.prato}}</h3>
+            <p class="item-detail">R$:
+              <span class="item-price">{{number.preco}}
+              </span>
+          </p>
           </ion-label>
         </ion-item>
       </ion-list>
       <section class="full-width">
-        <header style="text-align: center;margin-top: 20px;">TOTAL: R$59,90</header>
+        <header style="text-align: center;margin-top: 20px;">TOTAL: R$ {{total}} </header>
         <ion-button expand="full" color="secondary">CHECKOUT</ion-button>
       </section>
     </div>
