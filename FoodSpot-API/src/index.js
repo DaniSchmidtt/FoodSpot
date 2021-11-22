@@ -12,7 +12,7 @@ app.use('/restaurante',restauranterouter)
 app.use('/cardapio',cardapiorouter)
 app.use('/login',loginrouter)
 
-const port = process.env.port || 1337
+const port = process.env.PORT || 1337
 
 app.listen(port, function () {
     console.log('run in port ' + port)

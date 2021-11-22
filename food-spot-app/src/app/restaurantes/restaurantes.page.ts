@@ -2,6 +2,7 @@ import { Component, OnInit, ɵɵsetComponentScope } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-restaurantes',
@@ -15,7 +16,7 @@ export class RestaurantesPage implements OnInit {
   public retorno;
 
   constructor(private activatedRoute: ActivatedRoute,public httpClient: HttpClient) {
-      this.httpClient.get("http://localhost:1337/restaurante")
+      this.httpClient.get(environment.api_url + "/restaurante")
       .subscribe(data => {
         this.retorno = data;
         console.log(data)
