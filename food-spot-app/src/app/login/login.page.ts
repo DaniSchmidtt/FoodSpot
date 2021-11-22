@@ -5,6 +5,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -27,7 +28,7 @@ export class LoginPage implements OnInit {
       "senha": this.password
     }
 
-    this.httpClient.post("http://localhost:1337/login/auth", postData)
+    this.httpClient.post(environment.api_url + "/login/auth", postData)
       .subscribe(data => {
         this.retorno = data;
         this.appComponent.isloged = this.retorno.auth;
