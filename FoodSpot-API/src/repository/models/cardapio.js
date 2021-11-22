@@ -13,18 +13,10 @@ let cardapioschema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ingredientes: {
+    preco: {
         type: String,
         required: true
-    },
-    categoria: {
-    type: String,
-    required: true
-    },
-    alergenicos: {
-        type: String,
-        required: true
-    }    
+    }
 })
 let schema = mongoose.model('cardapios', cardapioschema, 'cardapios')
 module.exports = schema
