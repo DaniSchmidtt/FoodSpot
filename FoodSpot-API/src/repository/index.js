@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb+srv://admin:123@cluster0.rjlba.mongodb.net/test?authSource=admin&replicaSet=atlas-4qm2jf-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
+mongoose.connect("mongodb+srv://sa:toledo@foodspotdb.ie1um.mongodb.net/myFirstDatabase?authSource=admin&replicaSet=atlas-qt2z0m-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true")
 
 module.exports = {
     restaurantemodel: require('./models/restaurante'),
