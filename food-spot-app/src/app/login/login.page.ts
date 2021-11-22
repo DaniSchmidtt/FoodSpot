@@ -32,10 +32,33 @@ export class LoginPage implements OnInit {
         this.retorno = data;
         this.appComponent.isloged = this.retorno.auth;
         this.appComponent.user = this.email;
+        this.appComponent.typeOfUser = 0;
         this.showAlert("Sucesso", "Login realizado");  
         this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
       }, error => {
-        this.showAlert("Login failed", "Login ou senha não estão cadastrados");
+        this.httpClient.post("http://localhost:1337/login/authadm", postData)
+        .subscribe(data => {
+          this.retorno = data;
+          this.appComponent.isloged = this.retorno.auth;
+          this.appComponent.user = this.email;
+          this.appComponent.typeOfUser = 1;
+          this.showAlert("Sucesso", "Login realizado");  
+          this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
+        }, error => {
+          this.httpClient.post("http://localhost:1337/login/authRestaurante", postData)
+          .subscribe(data => {
+            this.retorno = data;
+            this.appComponent.isloged = this.retorno.auth;
+            this.appComponent.user = this.email;
+            this.appComponent.typeOfUser = 2;
+            this.showAlert("Sucesso", "Login realizado");  
+            this.router.navigateByUrl('restaurantes/Restaurantes',{replaceUrl:true})      
+          }, error => {            
+            this.showAlert("Login failed", "Login ou senha não estão cadastrados");
+          });
+          //this.showAlert("Login failed", "Login ou senha não estão cadastrados");
+        });
+        //this.showAlert("Login failed", "Login ou senha não estão cadastrados");
       });
       
   }

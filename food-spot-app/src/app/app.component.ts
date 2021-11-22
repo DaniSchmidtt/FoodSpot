@@ -15,11 +15,13 @@ export class AppComponent {
   ];
   public appPagesOff = [
     { title: 'Restaurantes', url: '/restaurantes/Restaurantes', icon: 'restaurant' },
-    { title: 'Procurar', url: '/procurar/Procurar', icon: 'search' },
-    { title: 'cardapio', url: '/cardapio/cardapio', icon: 'search' },
-    { title: 'cadastro-prato', url: '/cadastro-prato/cadastro-prato', icon: 'search' },
-    { title: 'cadastro-restaurante', url: '/cadastro-restaurante/cadastro-restaurante', icon: 'search' },
-    { title: 'detalhe', url: '/detalhe/detalhe', icon: 'search' }
+    { title: 'cardapio', url: '/cardapio/cardapio', icon: 'book' }
+  ];
+  public appAdm= [
+    { title: 'cadastro-restaurante', url: '/cadastro-restaurante/cadastro-restaurante', icon: 'restaurant' }
+  ];
+  public appRestaurante= [
+    { title: 'cadastro de prato', url: '/cadastro-prato/cadastro-prato', icon: 'plate' },
   ];
   public appBottonPages= [
     { title: 'Login', url: '/login/Login', icon: 'enter' },
@@ -28,14 +30,16 @@ export class AppComponent {
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   public isloged;
   public user;
+  public typeOfUser;
   logout(){
     this.isloged = null
     this.user = null
+    this.typeOfUser = null
   }
   constructor(public httpClient: HttpClient) {
     this.isloged = null;
   }
   public submitForm(form){
-    console.log("form submitted YAY");
+    console.log("form submitted");
   }
 }
